@@ -26,4 +26,3 @@
     return [UIColor colorWithWhite:0.565 alpha:1];
 }
 %end
-%end
