@@ -1,4 +1,4 @@
-#import "Tweak.h"
+#import <UIKit/UIKit.h>
 
 %hook YTColorPalette
 - (UIColor *)textPrimary { 
