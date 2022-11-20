@@ -1,10 +1,9 @@
 #import <UIKit/UIKit.h>
 
-@interface UIColor : NSObject
-@end
-
 @interface YTColorPalette : NSObject
+@property(readonly, nonatomic) long long pageStyle;
 @end
 
 @interface YTCommonColorPalette : NSObject
+@property(readonly, nonatomic) long long pageStyle;
 @end
