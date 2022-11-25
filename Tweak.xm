@@ -22,7 +22,4 @@
 + (UIColor *)whiteColor {
     return [UIColor colorWithWhite:0.565 alpha:1];
 }
-+ (UIColor *)lightText {
-    return [UIColor colorWithWhite:0.565 alpha:1];
-}
 %end
