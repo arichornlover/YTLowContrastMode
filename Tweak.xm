@@ -60,7 +60,7 @@
 }
 %end
 
-%hook ELMView // Changes the Texts im the Sub Menu
+%hook ELMView // Changes the Texts in the Sub Menu
 - (void)didMoveToWindow {
     %orig;
     if (isDarkMode()) {
