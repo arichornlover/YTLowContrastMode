@@ -60,11 +60,11 @@
 }
 %end
 
-%hook ELMTextNode // Changes the Texts im the Sub Menu
+%hook ELMView // Changes the Texts im the Sub Menu
 - (void)didMoveToWindow {
     %orig;
     if (isDarkMode()) {
-        self.subviews[0].backgroundColor = [UIColor blackColor];
+        self.subviews[0].textColor = [UIColor colorWithRed: 0.56 green: 0.56 blue: 0.56 alpha: 1.00];
     }
 }
 %end
