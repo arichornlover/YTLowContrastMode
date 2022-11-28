@@ -13,12 +13,6 @@
     }
         return [UIColor colorWithRed: 0.38 green: 0.38 blue: 0.38 alpha: 1.00];
 }
-- (UIColor *)overlayTextPrimary {
-    if (self.pageStyle == 1) {
-        return [UIColor colorWithRed: 0.56 green: 0.56 blue: 0.56 alpha: 1.00];
-    }
-        return [UIColor colorWithRed: 0.38 green: 0.38 blue: 0.38 alpha: 1.00];
-}
 %end
 
 %hook YTCommonColorPalette // Changes Texts & Icons in YouTube Bottom Bar (Doesn't change Texts & Icons under the video player)
@@ -34,37 +28,31 @@
     }
         return [UIColor colorWithRed: 0.38 green: 0.38 blue: 0.38 alpha: 1.00];
 }
-- (UIColor *)overlayTextPrimary {
-    if (self.pageStyle == 1) {
-        return [UIColor colorWithRed: 0.56 green: 0.56 blue: 0.56 alpha: 1.00];
-    }
-        return [UIColor colorWithRed: 0.38 green: 0.38 blue: 0.38 alpha: 1.00];
-}
-- (UIColor *)outline {
-    if (self.pageStyle == 1) {
-        return [UIColor colorWithRed: 0.56 green: 0.56 blue: 0.56 alpha: 1.00];
-    }
-        return [UIColor colorWithRed: 0.38 green: 0.38 blue: 0.38 alpha: 1.00];
-}
 %end
 
-%hook UIColor // Changes the Icons & Text under Videos, Comment Section & Shorts
-+ (UIColor *)whiteColor { // Deprecated by YouTube as of v17.40.5-Newer
+%hook UIColor // Changes the Icons & Text under Videos, Comment Section & Shorts (Deprecated by YouTube as of v17.40.5-Newer)
++ (UIColor *)whiteColor {
          return [UIColor colorWithRed: 0.56 green: 0.56 blue: 0.56 alpha: 1.00];
 }
 %end
 
-%hook UIInterface
-+ (UIColor *)labelColor { // For New YouTube UI v17.40.5-present
+%hook UIView // changes some of the texts around the YouTube App.
++ (UIColor *)tintColor {
+         return [UIColor colorWithRed: 0.56 green: 0.56 blue: 0.56 alpha: 1.00];
+}
+%end
+
+%hook UIInterface // this is only used if YouTube uses these methods in the future.
++ (UIColor *)labelColor {
          return [UIColor colorWithRed: 0.56 green: 0.56 blue: 0.56 alpha: 1.00];
 }	 
-+ (UIColor *)secondaryLabelColor { // For New YouTube UI v17.40.5-present
++ (UIColor *)secondaryLabelColor {
          return [UIColor colorWithRed: 0.56 green: 0.56 blue: 0.56 alpha: 1.00];
 }	 
-+ (UIColor *)tertiaryLabelColor { // For New YouTube UI v17.40.5-present
++ (UIColor *)tertiaryLabelColor {
          return [UIColor colorWithRed: 0.56 green: 0.56 blue: 0.56 alpha: 1.00];
 }	
-+ (UIColor *)quaternaryLabelColor { // For New YouTube UI v17.40.5-present
++ (UIColor *)quaternaryLabelColor {
          return [UIColor colorWithRed: 0.56 green: 0.56 blue: 0.56 alpha: 1.00];
 }	 
 %end
