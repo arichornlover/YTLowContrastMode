@@ -1,11 +1,12 @@
 #import "Tweak.h"
 
+// Low Contrast Mode v1.1.0
 %hook YTColorPalette // Changes Texts & Icons in YouTube Bottom Bar + Text Icons under Video Player
 - (UIColor *)textPrimary {
     if (self.pageStyle == 1) {
-        return [UIColor colorWithRed: 0.56 green: 0.56 blue: 0.56 alpha: 1.00];
+        return [UIColor colorWithRed: 0.56 green: 0.56 blue: 0.56 alpha: 1.00]; // Dark Mode
     }
-        return [UIColor colorWithRed: 0.38 green: 0.38 blue: 0.38 alpha: 1.00];
+        return [UIColor colorWithRed: 0.38 green: 0.38 blue: 0.38 alpha: 1.00]; // Light Mode
 }
 - (UIColor *)textSecondary {
     if (self.pageStyle == 1) {
@@ -31,7 +32,7 @@
 %end
 
 %hook UIColor // Changes the Icons & Text under Videos, Comment Section & Shorts (Deprecated by YouTube as of v17.40.5-Newer)
-+ (UIColor *)whiteColor {
++ (UIColor *)whiteColor { // Deprecated by YouTube
          return [UIColor colorWithRed: 0.56 green: 0.56 blue: 0.56 alpha: 1.00];
 }
 %end
@@ -63,5 +64,20 @@
     if (isDarkMode()) {
         self.subviews[0].tintColor = [UIColor colorWithRed: 0.56 green: 0.56 blue: 0.56 alpha: 1.00];
     }
+}
+%end
+
+%hook YTBackstageCreateRepostDetailView
+- (void)setTintColor:(UIColor *)color {
+    if (isDarkMode()) {
+        return %orig([UIColor colorWithRed: 0.56 green: 0.56 blue: 0.56 alpha: 1.00]);
+    }
+        return %orig;
+}
+%end
+
+%hook MBProgressHUD // changes texts and buttons exclusively on the iSponsorBlock Tweak.
++ (UIColor *)contentColor {
+         return [UIColor colorWithRed: 0.56 green: 0.56 blue: 0.56 alpha: 1.00];
 }
 %end
