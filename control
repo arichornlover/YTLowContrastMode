@@ -1,6 +1,6 @@
 Package: com.arichorn.lowcontrastmode
 Name: LowContrastMode
-Version: 1.0.6
+Version: 1.1.0
 Architecture: iphoneos-arm
 Description: Tries to make YouTube easier on the eyes.
 Maintainer: arichorn
