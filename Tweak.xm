@@ -114,10 +114,15 @@
 - (void)didMoveToWindow {
     %orig;
     if (isDarkMode()) {
+        if ([self.nextResponder isKindOfClass:%c(ASScrollView)]) { self.tintColor = [UIColor whiteColor]; }
+        if ([self.accessibilityIdentifier isEqualToString:@"eml.cvr"]) { self.tintColor = [UIColor whiteColor]; }
+        if ([self.accessibilityIdentifier isEqualToString:@"rich_header"]) { self.tintColor = [UIColor whiteColor]; }
+        if ([self.accessibilityIdentifier isEqualToString:@"id.ui.comment_cell"]) { self.tintColor = [UIColor whiteColor]; }
+        if ([self.accessibilityIdentifier isEqualToString:@"id.ui.cancel.button"]) { self.superview.tintColor = [UIColor whiteColor]; }
+        if ([self.accessibilityIdentifier isEqualToString:@"id.elements.components.comment_composer"]) { self.tintColor = [UIColor whiteColor]; }
         if ([self.accessibilityIdentifier isEqualToString:@"id.elements.components.video_list_entry"]) { self.tintColor = [UIColor whiteColor]; }
         if ([self.accessibilityIdentifier isEqualToString:@"id.comment.guidelines_text"]) { self.superview.tintColor = [UIColor whiteColor]; }
         if ([self.accessibilityIdentifier isEqualToString:@"id.comment.channel_guidelines_bottom_sheet_container"]) { self.tintColor = [UIColor whiteColor]; }
         if ([self.accessibilityIdentifier isEqualToString:@"id.comment.channel_guidelines_entry_banner_container"]) { self.tintColor = [UIColor whiteColor]; }
-    }
 }
 %end
