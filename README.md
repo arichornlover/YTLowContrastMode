@@ -13,7 +13,11 @@
 
 About the Tweak: this tweak tries to make the UI not look bright/dark in Light/Dark Mode and to make the whole YouTube UI feel more consistent.
 
-1.0.5-2: Updated the tweak by removing Unneeded code and added some Elements that may be important for the New YouTube UI.
+1.1.0: 
+- Added Support for Sub Menu
+- Added iSponsorBlock Support
+- Added Support for some new UI Elements on the app
+- Replaced Methods with ‘whiteColor‘ using UIColor Hook
 
-## Versions
-Low Contrast Mode (Compatibility: YouTube v15.49.6-17.39.5)
+## Version Compatibility
+Low Contrast Mode (Compatible With: YouTube v15.02.1-17.46.4)
