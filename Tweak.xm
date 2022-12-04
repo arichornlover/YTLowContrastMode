@@ -86,6 +86,15 @@
 }
 %end
 
+%hook SponsorBlockSettingsController
+- (void)viewDidLoad {
+    if (self.traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark) {
+        %orig;
+        self.tableView.tintColor = [UIColor whiteColor];
+    } else { return %orig; }
+}
+%end
+
 %hook SponsorBlockViewController
 - (void)viewDidLoad {
     if (self.traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark) {
