@@ -1,6 +1,12 @@
 #import "Tweak.h"
 
 // Low Contrast Mode v1.1.0
+%hook UIColor // Changes the whiteColor Method to be YouTube's old ui and also effects Icons & Text under Videos, Comment Section & Shorts caused by whiteColor (Deprecated by YouTube as of v17.40.5-Newer)
++ (UIColor *)whiteColor { // Deprecated by YouTube
+         return [UIColor colorWithRed: 0.56 green: 0.56 blue: 0.56 alpha: 1.00];
+}
+%end
+
 %hook YTColorPalette // Changes Texts & Icons in YouTube Bottom Bar + Text Icons under Video Player
 - (UIColor *)textPrimary {
     if (self.pageStyle == 1) {
@@ -31,30 +37,24 @@
 }
 %end
 
-%hook UIColor // Changes the Icons & Text under Videos, Comment Section & Shorts (Deprecated by YouTube as of v17.40.5-Newer)
-+ (UIColor *)whiteColor { // Deprecated by YouTube
-         return [UIColor colorWithRed: 0.56 green: 0.56 blue: 0.56 alpha: 1.00];
-}
-%end
-
 %hook UIView // changes some of the texts around the YouTube App.
 - (UIColor *)tintColor {
-         return [UIColor colorWithRed: 0.56 green: 0.56 blue: 0.56 alpha: 1.00];
+         return [UIColor.whiteColor];
 }
 %end
 
 %hook UIInterface // this is only used if YouTube uses these methods in the future.
 - (UIColor *)labelColor {
-         return [UIColor colorWithRed: 0.56 green: 0.56 blue: 0.56 alpha: 1.00];
+         return [UIColor.whiteColor];
 }	 
 - (UIColor *)secondaryLabelColor {
-         return [UIColor colorWithRed: 0.56 green: 0.56 blue: 0.56 alpha: 1.00];
+         return [UIColor.whiteColor];
 }	 
 - (UIColor *)tertiaryLabelColor {
-         return [UIColor colorWithRed: 0.56 green: 0.56 blue: 0.56 alpha: 1.00];
+         return [UIColor.whiteColor];
 }	
 - (UIColor *)quaternaryLabelColor {
-         return [UIColor colorWithRed: 0.56 green: 0.56 blue: 0.56 alpha: 1.00];
+         return [UIColor.whiteColor];
 }	 
 %end
 
@@ -62,7 +62,7 @@
 - (void)didMoveToWindow {
     %orig;
     if (isDarkMode()) {
-        self.subviews[0].tintColor = [UIColor colorWithRed: 0.56 green: 0.56 blue: 0.56 alpha: 1.00];
+        self.subviews[0].tintColor = [UIColor.whiteColor];
     }
 }
 %end
@@ -70,7 +70,7 @@
 %hook YTBackstageCreateRepostDetailView
 - (void)setTintColor:(UIColor *)color {
     if (isDarkMode()) {
-        return %orig([UIColor colorWithRed: 0.56 green: 0.56 blue: 0.56 alpha: 1.00]);
+        return %orig([UIColor.whiteColor]);
     }
         return %orig;
 }
@@ -78,6 +78,6 @@
 
 %hook MBProgressHUD // changes texts and buttons exclusively on the iSponsorBlock Tweak.
 - (UIColor *)contentColor {
-         return [UIColor colorWithRed: 0.56 green: 0.56 blue: 0.56 alpha: 1.00];
+         return [UIColor.whiteColor];
 }
 %end
