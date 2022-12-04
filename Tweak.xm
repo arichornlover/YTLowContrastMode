@@ -37,24 +37,25 @@
 }
 %end
 
+// Additional LowContrastMode Code
 %hook UIView // changes some of the texts around the YouTube App.
 - (UIColor *)tintColor {
-         return [UIColor.whiteColor];
+         return [UIColor whiteColor];
 }
 %end
 
 %hook UIInterface // this is only used if YouTube uses these methods in the future.
 - (UIColor *)labelColor {
-         return [UIColor.whiteColor];
+         return [UIColor whiteColor];
 }	 
 - (UIColor *)secondaryLabelColor {
-         return [UIColor.whiteColor];
+         return [UIColor whiteColor];
 }	 
 - (UIColor *)tertiaryLabelColor {
-         return [UIColor.whiteColor];
+         return [UIColor whiteColor];
 }	
 - (UIColor *)quaternaryLabelColor {
-         return [UIColor.whiteColor];
+         return [UIColor whiteColor];
 }	 
 %end
 
@@ -62,7 +63,7 @@
 - (void)didMoveToWindow {
     %orig;
     if (isDarkMode()) {
-        self.subviews[0].tintColor = [UIColor.whiteColor];
+        self.subviews[0].tintColor = [UIColor whiteColor];
     }
 }
 %end
@@ -70,7 +71,7 @@
 %hook YTBackstageCreateRepostDetailView
 - (void)setTintColor:(UIColor *)color {
     if (isDarkMode()) {
-        return %orig([UIColor.whiteColor]);
+        return %orig([UIColor whiteColor]);
     }
         return %orig;
 }
@@ -78,6 +79,6 @@
 
 %hook MBProgressHUD // changes texts and buttons exclusively on the iSponsorBlock Tweak.
 - (UIColor *)contentColor {
-         return [UIColor.whiteColor];
+         return [UIColor whiteColor];
 }
 %end
