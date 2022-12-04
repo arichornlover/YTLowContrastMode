@@ -38,22 +38,22 @@
 %end
 
 %hook UIView // changes some of the texts around the YouTube App.
-+ (UIColor *)tintColor {
+- (UIColor *)tintColor {
          return [UIColor colorWithRed: 0.56 green: 0.56 blue: 0.56 alpha: 1.00];
 }
 %end
 
 %hook UIInterface // this is only used if YouTube uses these methods in the future.
-+ (UIColor *)labelColor {
+- (UIColor *)labelColor {
          return [UIColor colorWithRed: 0.56 green: 0.56 blue: 0.56 alpha: 1.00];
 }	 
-+ (UIColor *)secondaryLabelColor {
+- (UIColor *)secondaryLabelColor {
          return [UIColor colorWithRed: 0.56 green: 0.56 blue: 0.56 alpha: 1.00];
 }	 
-+ (UIColor *)tertiaryLabelColor {
+- (UIColor *)tertiaryLabelColor {
          return [UIColor colorWithRed: 0.56 green: 0.56 blue: 0.56 alpha: 1.00];
 }	
-+ (UIColor *)quaternaryLabelColor {
+- (UIColor *)quaternaryLabelColor {
          return [UIColor colorWithRed: 0.56 green: 0.56 blue: 0.56 alpha: 1.00];
 }	 
 %end
@@ -77,7 +77,7 @@
 %end
 
 %hook MBProgressHUD // changes texts and buttons exclusively on the iSponsorBlock Tweak.
-+ (UIColor *)contentColor {
+- (UIColor *)contentColor {
          return [UIColor colorWithRed: 0.56 green: 0.56 blue: 0.56 alpha: 1.00];
 }
 %end
