@@ -68,26 +68,6 @@
 }
 %end
 
-%hook ASWAppSwitchingSheetFooterView
-- (void)setBackgroundColor:(UIColor *)color {
-    if (isDarkMode()) {
-        return %orig(raisedColor);
-    }
-        return %orig;
-}
-%end
-
-%hook ASWAppSwitcherCollectionViewCell
-- (void)didMoveToWindow {
-    %orig;
-    if (isDarkMode()) { 
-        self.tintColor = whiteColor;
-        self.subviews[1].tintColor = whiteColor;
-        self.superview.tintColor = whiteColor;
-    }
-}
-%end
-
 %hook YTBackstageCreateRepostDetailView
 - (void)setTintColor:(UIColor *)color {
     if (isDarkMode()) {
