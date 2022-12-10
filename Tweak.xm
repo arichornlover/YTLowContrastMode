@@ -25,9 +25,9 @@
 %hook YTCommonColorPalette // Changes Texts & Icons in YouTube Bottom Bar (Doesn't change Texts & Icons under the video player)
 - (UIColor *)textPrimary {
     if (self.pageStyle == 1) {
-        return [UIColor colorWithRed: 0.56 green: 0.56 blue: 0.56 alpha: 1.00];
+        return [UIColor colorWithRed: 0.56 green: 0.56 blue: 0.56 alpha: 1.00]; // Dark Mode
     }
-        return [UIColor colorWithRed: 0.38 green: 0.38 blue: 0.38 alpha: 1.00];
+        return [UIColor colorWithRed: 0.38 green: 0.38 blue: 0.38 alpha: 1.00]; // Light Mode
 }
 - (UIColor *)textSecondary {
     if (self.pageStyle == 1) {
@@ -37,14 +37,19 @@
 }
 %end
 
-// Additional LowContrastMode Code
-%hook UIView // changes some of the texts around the YouTube App.
+%hook YTQTMButton // Changes Tweak Icons/Texts/Images
+- (UIColor *)sponsorBlockButton {
+         return [UIColor whiteColor];
+}
+%end
+
+%hook UIView // Changes some of the texts around the YouTube App.
 - (UIColor *)tintColor {
          return [UIColor whiteColor];
 }
 %end
 
-%hook UIInterface // this is only used if YouTube uses these methods in the future.
+%hook UIInterface // Chanbes some of the texts that uses UIInterface in the YouTube App.
 - (UIColor *)labelColor {
          return [UIColor whiteColor];
 }	 
@@ -65,48 +70,6 @@
     if (isDarkMode()) {
         self.subviews[0].tintColor = [UIColor whiteColor];
     }
-}
-%end
-
-%hook YTBackstageCreateRepostDetailView
-- (void)setTintColor:(UIColor *)color {
-    if (isDarkMode()) {
-        return %orig([UIColor whiteColor]);
-    }
-        return %orig;
-}
-%end
-
-%hook YTFormattedStringLabel
-- (void)setTintColor:(UIColor *)color {
-    if (isDarkMode()) {
-        return %orig([UIColor whiteColor]);
-    }
-        return %orig;
-}
-%end
-
-%hook SponsorBlockSettingsController
-- (void)viewDidLoad {
-    if (self.traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark) {
-        %orig;
-        self.tableView.tintColor = [UIColor whiteColor];
-    } else { return %orig; }
-}
-%end
-
-%hook SponsorBlockViewController
-- (void)viewDidLoad {
-    if (self.traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark) {
-        %orig;
-        self.view.tintColor = [UIColor whiteColor];
-    } else { return %orig; }
-}
-%end
-
-%hook MBProgressHUD // changes texts and buttons exclusively on the iSponsorBlock Tweak.
-- (UIColor *)contentColor {
-         return [UIColor whiteColor];
 }
 %end
 
