@@ -6,7 +6,7 @@
          return [UIColor colorWithRed: 0.56 green: 0.56 blue: 0.56 alpha: 1.00];
 }
 + (UIColor *)textColor {  // Light Theme Color
-         return [UIColor colorWithRed: 0.38 green: 0.38 blue: 0.38 alpha: 1.00];
+         return [UIColor colorWithRed: 0.56 green: 0.56 blue: 0.56 alpha: 1.00];
 }
 + (UIColor *)dynamicLabelColor {
          return [UIColor colorWithRed: 0.56 green: 0.56 blue: 0.56 alpha: 1.00];
@@ -24,7 +24,7 @@
     if (self.pageStyle == 1) {
         return [UIColor whiteColor]; // Dark Theme
     }
-        return [UIColor textColor]; // Light Theme
+        return [UIColor colorWithRed: 0.38 green: 0.38 blue: 0.38 alpha: 1.00]; // Light Theme
 }
 %end
 
@@ -33,49 +33,49 @@
     if (self.pageStyle == 1) {
         return [UIColor whiteColor]; // Dark Theme
     }
-        return [UIColor textColor]; // Light Theme
+        return [UIColor colorWithRed: 0.38 green: 0.38 blue: 0.38 alpha: 1.00]; // Light Theme
 }
 - (UIColor *)textSecondary {
     if (self.pageStyle == 1) {
         return [UIColor whiteColor]; // Dark Theme
     }
-        return [UIColor textColor]; // Light Theme
+        return [UIColor colorWithRed: 0.38 green: 0.38 blue: 0.38 alpha: 1.00]; // Light Theme
 }
 - (UIColor *)textPrimaryInverse {
     if (self.pageStyle == 1) {
         return [UIColor whiteColor]; // Dark Theme
     }
-        return [UIColor textColor]; // Light Theme
+        return [UIColor colorWithRed: 0.38 green: 0.38 blue: 0.38 alpha: 1.00]; // Light Theme
 }
 - (UIColor *)overlayTextPrimary {
     if (self.pageStyle == 1) {
         return [UIColor whiteColor]; // Dark Theme
     }
-        return [UIColor textColor]; // Light Theme
+        return [UIColor colorWithRed: 0.38 green: 0.38 blue: 0.38 alpha: 1.00]; // Light Theme
 }
 - (UIColor *)overlayTextSecondary {
     if (self.pageStyle == 1) {
         return [UIColor whiteColor]; // Dark Theme
     }
-        return [UIColor textColor]; // Light Theme
+        return [UIColor colorWithRed: 0.38 green: 0.38 blue: 0.38 alpha: 1.00]; // Light Theme
 }
 - (UIColor *)overlayTextTertiary {
     if (self.pageStyle == 1) {
         return [UIColor whiteColor]; // Dark Theme
     }
-        return [UIColor textColor]; // Light Theme
+        return [UIColor colorWithRed: 0.38 green: 0.38 blue: 0.38 alpha: 1.00]; // Light Theme
 }
 - (UIColor *)overlayButtonPrimary {
     if (self.pageStyle == 1) {
         return [UIColor whiteColor]; // Dark Theme
     }
-        return [UIColor textColor]; // Light Theme
+        return [UIColor colorWithRed: 0.38 green: 0.38 blue: 0.38 alpha: 1.00]; // Light Theme
 }
 - (UIColor *)overlayButtonSecondary {
     if (self.pageStyle == 1) {
         return [UIColor whiteColor]; // Dark Theme
     }
-        return [UIColor textColor]; // Light Theme
+        return [UIColor colorWithRed: 0.38 green: 0.38 blue: 0.38 alpha: 1.00]; // Light Theme
 }
 %end
 
