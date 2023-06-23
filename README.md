@@ -24,9 +24,9 @@ About the Tweak: this tweak tries to make the UI look dimmer on the icons & text
   - Removed all of YouTube v15.xx.x related code - Support has been removed since these old youtube app versions no longer work anymore.
 
 ## YouTube App Version Compatibility ✅
-Only Compatiable with YouTube `v16.05.7-v17.38.10`
+Compatiable with YouTube `v16.05.7-v17.38.10`
 
-## YouTubw App Version Incompatibility 📵
+## YouTube App Version Incompatibility 📵
 Incompatiable with YouTube `v17.39.4-latest`
 
 # Screenshots:
