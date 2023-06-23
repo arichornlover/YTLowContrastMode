@@ -11,13 +11,23 @@
    <img src="https://img.shields.io/github/forks/arichorn/LowContrastMode?style=social" alt="Badge"/>
 </p>
 
-About the Tweak: this tweak tries to make the UI not look bright/dark in Light/Dark Mode and to make the whole YouTube UI feel more consistent.
+About the Tweak: this tweak tries to make the UI look dimmer on the icons & texts/labels in the themes Light/Dark Mode and also tries to make it feel like the old YouTube UI from pre-2020.
 
-1.1.0: 
-- Added Support for Sub Menu
-- Added iSponsorBlock Support
-- Added Support for some new UI Elements on the app
-- Replaced Methods with ‘whiteColor‘ using UIColor Hook
+1.3.0: 
+- Added Support for Newer YouTube UI (Now Supports up to YouTube v17.38.10)
+  - Added ASTextNode
+  - Added ASTextFieldNode
+  - Added ASTextView
+  - Added ASButtonNode
+  - and others are etc
+- Removed Deprecated Code
+  - Removed all of YouTube v15.xx.x related code - Support has been removed since these old youtube app versions no longer work anymore.
 
-## Version Compatibility
-Low Contrast Mode (Compatible With: YouTube v15.02.1-17.46.4)
+## YouTube App Version Compatibility ✅
+Only Compatiable with YouTube `v16.05.7-v17.38.10`
+
+## YouTubw App Version Incompatibility 📵
+Incompatiable with YouTube `v17.39.4-latest`
+
+# Screenshots:
+![IMG_1176](https://github.com/arichorn/LowContrastMode/assets/78001398/e8d83541-8e69-4985-ad29-61660046b63f)
