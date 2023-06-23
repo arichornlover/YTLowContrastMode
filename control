@@ -6,4 +6,4 @@ Description: Tries to make YouTube App look dimmer on the eyes.
 Maintainer: arichorn
 Author: arichorn
 Section: Tweaks
-Depends: mobilesubstrate (>= 0.9.5000)
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 12.0)
