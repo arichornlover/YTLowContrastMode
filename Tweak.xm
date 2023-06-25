@@ -20,16 +20,28 @@
 
 %hook YTCommonColorPalette
 - (UIColor *)textPrimary {
-    if (self.pageStyle == 1) {
+    if ([[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"] compare:@"17.38.10" options:NSNumericSearch] == NSOrderedDescending) {
         return [UIColor whiteColor]; // Dark Theme
-    }
+    } else {
         return [UIColor colorWithRed: 0.38 green: 0.38 blue: 0.38 alpha: 1.00]; // Light Theme
+    }
 }
+
 - (UIColor *)textSecondary {
-    if (self.pageStyle == 1) {
+    if ([[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"] compare:@"17.38.10" options:NSNumericSearch] == NSOrderedDescending) {
         return [UIColor whiteColor]; // Dark Theme
-    }
+    } else {
         return [UIColor colorWithRed: 0.38 green: 0.38 blue: 0.38 alpha: 1.00]; // Light Theme
+    }
+}
+%end
+
+%hook YTMainAppViewController
+- (void)viewDidLoad {
+    %orig;
+    if (self.pageStyle == 1) {
+    } else {
+    }
 }
 %end
 
