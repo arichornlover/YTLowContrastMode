@@ -136,6 +136,7 @@
     %orig(textColor);
 }
 %end
+/*
 %hook _ASDisplayView
 - (void)didMoveToWindow {
     %orig;
@@ -160,6 +161,7 @@
     label.textColor = [UIColor whiteColor];
 }
 %end
+*/
 %end
 
 %ctor {
