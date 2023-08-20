@@ -11,23 +11,13 @@
    <img src="https://img.shields.io/github/forks/arichorn/LowContrastMode?style=social" alt="Badge"/>
 </p>
 
-About the Tweak: this tweak tries to make the UI look dimmer on the icons & texts/labels in the themes Light/Dark Mode and also tries to make it feel like the old YouTube UI from pre-2020.
-
-1.3.0: 
-- Added Support for Newer YouTube UI (Now Supports up to YouTube v17.38.10)
-  - Added ASTextNode
-  - Added ASTextFieldNode
-  - Added ASTextView
-  - Added ASButtonNode
-  - and others are etc
-- Removed Deprecated Code
-  - Removed all of YouTube v15.xx.x related code - Support has been removed since these old youtube app versions no longer work anymore.
+About the Tweak: this tweak tries to make the App Interface dimmer on the icons & texts/labels and at least tries to make it feel like the old YouTube UI from pre-2020.
 
 ## YouTube App Version Compatibility ✅
-Compatiable with YouTube `v16.05.7-v17.38.10`
+Compatiable and works with YouTube `v16.05.7-v17.38.10`
 
 ## YouTube App Version Incompatibility 📵
-Incompatiable with YouTube `v17.39.4-latest`
+Incompatiable and doesn't work with YouTube `v17.39.4-latest`
 
 # Screenshots:
 ![IMG_1176](https://github.com/arichorn/LowContrastMode/assets/78001398/e8d83541-8e69-4985-ad29-61660046b63f)
