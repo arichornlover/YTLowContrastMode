@@ -1,14 +1,14 @@
 #import "Tweak.h"
 
+%group gLowContrastMode // Low Contrast Mode v1.4.2
 %hook YTSettingsViewController
-- (void)setSectionItems:(NSMutableArray <YTSettingsSectionItem *> *)sectionItems forCategory:(NSInteger)category title:(NSString *)title titleDescription:(NSString *)titleDescription headerHidden:(BOOL)headerHidden {
+- (void)setSectionItems:(NSMutableArray<YTSettingsSectionItem *> *)sectionItems forCategory:(NSInteger)category title:(NSString *)title titleDescription:(NSString *)titleDescription headerHidden:(BOOL)headerHidden {
     if (category == 1) {
-        YTSettingsSectionItem *lowContrastMode = [[YTSettingsSectionItem alloc] initWithTitle:@"Low Contrast Mode"
-                                                                             titleDescription:@"Enable to make the app easier on the eyes. App restart is required."];
+        YTSettingsSectionItem *lowContrastMode = [[YTSettingsSectionItem alloc] initWithTitle:@"Low Contrast Mode" titleDescription:@"Enable to make the app easier on the eyes. App restart is required."];
         lowContrastMode.hasSwitch = YES;
         lowContrastMode.switchVisible = YES;
         lowContrastMode.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"low_contrast_mode"];
-        lowContrastMode.switchBlock = ^BOOL (YTSettingsCell *cell, BOOL enabled) {
+        lowContrastMode.switchBlock = ^BOOL(YTSettingsCell *cell, BOOL enabled) {
             [[NSUserDefaults standardUserDefaults] setBool:enabled forKey:@"low_contrast_mode"];
             return YES;
         };
@@ -18,7 +18,6 @@
 }
 %end
 
-%group gLowContrastMode // Low Contrast Mode v1.4.2
 %hook UIColor
 + (UIColor *)whiteColor { // Dark Theme Color
          return [UIColor colorWithRed: 0.56 green: 0.56 blue: 0.56 alpha: 1.00];
