@@ -1,6 +1,6 @@
 # This has been created by @lillieH1000
 
-name: Build the YouTube Reborn deb
+name: Build the LowContrastMode deb
 
 on:
   workflow_dispatch:
