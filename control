@@ -1,9 +1,9 @@
-Package: com.arichorn.lowcontrastmode
+Package: com.arichornlover.lowcontrastmode
 Name: LowContrastMode
-Version: 1.4.2
+Version: 1.8.0
 Architecture: iphoneos-arm
 Description: Tries to make YouTube App look dimmer on the eyes.
-Maintainer: arichorn
-Author: arichorn
+Maintainer: arichornlover
+Author: arichornlover
 Section: Tweaks
-Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 12.0)
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 15.0)
