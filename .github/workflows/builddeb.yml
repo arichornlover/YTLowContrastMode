@@ -24,7 +24,7 @@ jobs:
         with:
           repository: chrisharper22/sdks
           ref: main
-          sparse-checkout: iPhoneOS16.2.sdk
+          sparse-checkout: iPhoneOS16.5.sdk
           path: theos/sdks
 
       - name: Checkout PoomSmart/YouTubeHeader
@@ -42,6 +42,6 @@ jobs:
           gmake clean package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
 
       - name: Upload a Build Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v6
         with:
           path: packages/*.deb
